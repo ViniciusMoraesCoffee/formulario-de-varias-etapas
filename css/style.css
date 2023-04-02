@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +7,7 @@
   border: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", "Courier New", Courier, monospace;
+  transition: 0.3s;
 }
 
 body {
@@ -19,6 +21,9 @@ body {
 
 .wrapper-content {
   min-width: 800px;
+  min-height: 460px;
+  width: 60vw;
+  height: 80vh;
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -31,16 +36,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-width: 290px;
+  min-width: 320px;
   height: auto;
   padding: 20px;
   border-radius: 15px;
-  background-image: url(/assets/images/bg-sidebar-desktop.svg);
+  background-image: url(../assets/images/bg-sidebar-desktop.svg);
   background-size: 100%;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -81,14 +85,16 @@ body {
   overflow: hidden;
 }
 
+/*Primeira etapa*/
 .wrp-information {
+  /*TEMPORARIO*/
   display: flex;
   flex-direction: column;
   gap: 40px;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 30px 80px;
+  padding: 30px 58px;
 }
 
 .wrp-tituloInfo h1 {
@@ -103,11 +109,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  justify-content: space-between;
+  height: 100%;
 }
 .wrp-inputsInfo input[type=submit] {
+  float: right;
   width: 120px;
   height: 40px;
-  margin: 60px 0 0 auto;
+  margin: 0px 0 0 auto;
   border-radius: 5px;
   background-color: #063e82;
   color: #ffffff;
@@ -119,6 +128,12 @@ body {
 }
 .wrp-inputsInfo input[type=submit]::-webkit-validation-bubble-message {
   background-color: #02295a;
+}
+
+.wrp-inp-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .wpr-inp {
@@ -143,6 +158,270 @@ body {
 }
 .wpr-inp input[type=number]::-webkit-outer-spin-button, .wpr-inp input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+/*Segunda etapa*/
+.wrp-slectPlan {
+  /*TEMPORÁRIO*/
+  display: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 30px 58px;
+}
+
+.wrp-infos-slect-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wpr-types-plan-monthly {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wpr-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  width: 120px;
+  height: 150px;
+  padding: 20px;
+  border: 2px solid #9699ab;
+  border-radius: 10px;
+}
+
+.wrp-info-plan h3 {
+  color: #063e82;
+  font-size: 1em;
+}
+.wrp-info-plan h4 {
+  color: #9699ab;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.wrp-types-choose-plan {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(214, 217, 230, 0.3098039216);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.plan-mode-on {
+  color: #02295a;
+}
+
+.plan-mode-off {
+  color: #9699ab;
+}
+
+.wpr-btns-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wpr-btns-nav button {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: "Ubuntu", "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+
+.btn-go-back {
+  background-color: transparent;
+  color: #9699ab;
+}
+
+.btn-go-back:hover {
+  background-color: rgba(214, 217, 230, 0.2117647059);
+}
+
+.btn-go-back:active {
+  background-color: rgba(214, 217, 230, 0.6196078431);
+}
+
+.btn-next-step {
+  color: #ffffff;
+  background-color: #063e82;
+}
+
+.btn-next-step:active {
+  background-color: #00224c;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: -2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #02295a;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/*Terceira etapa*/
+.wrp-adicionais {
+  display: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 30px 58px;
+}
+
+.wpr-content-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wrp-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wpr-addon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #9699ab;
+  border-radius: 8px;
+}
+
+.slected-addon {
+  background-color: rgba(179, 175, 255, 0.2);
+  border: 2px solid #02295a;
+}
+
+.wrp-info-add {
+  display: flex;
+  gap: 15px;
+}
+.wrp-info-add input {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #9699ab;
+  border-radius: 5px;
+}
+
+.wrp-description-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wrp-description-addons h2 {
+  color: #00224c;
+  font-size: 0.8;
+}
+.wrp-description-addons h3 {
+  color: #9699ab;
+  font-weight: 300;
+  font-size: 0.4;
+}
+
+.container-chekbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.container-chekbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+  border: 2px solid #9699ab;
+  border-radius: 4px;
+}
+
+.container-chekbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container-chekbox input:checked ~ .checkmark {
+  background-color: #483EFF;
+  border: 2px solid #483EFF;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-chekbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-chekbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 760px) {

@@ -58,72 +58,160 @@
     </div>
     <div class="conteiner-etapas">
 
-       <!-- #Primeira etapa -->
+       <!-- #start Primeira etapa -->
       <div class="wrp-information">
 
         <div class="wrp-tituloInfo">
           <h1>Informções Pessoais</h1>
-          <h3>Forneça seu nome, endereço de email e número de telefone</h3>
+          <h3>Forneça seu nome, endereço de email e número de telefone.</h3>
         </div>
 
         <form class="wrp-inputsInfo">
-          <div class="wpr-inp">
-            <span class="legendaInput">Nome completo</span>
-            <input type="text" id="inpNome" required>
+          <div class="wrp-inp-infos">
+            <div class="wpr-inp">
+              <span class="legendaInput">Nome completo</span>
+              <input type="text" id="inpNome" required>
+            </div>
+  
+            <div class="wpr-inp">
+              <span class="legendaInput">Endereço de Email</span>
+              <input type="email" id="inpEmail" required>
+            </div>
+            
+            <div class="wpr-inp">
+              <span class="legendaInput">Telefone celular</span>
+              <input type="number" id="inpTel" required>
+            </div>
           </div>
 
-          <div class="wpr-inp">
-            <span class="legendaInput">Endereço de Email</span>
-            <input type="email" id="inpEmail" required>
-          </div>
+          <div class="wrp-btn-submit"><input type="submit" value="Próximo Passo"></div>
           
-          <div class="wpr-inp">
-            <span class="legendaInput">Telefone celular</span>
-            <input type="number" id="inpTel" required>
-          </div>
-
-          <input type="submit" value="Próximo Passo">
         </form>
       </div>
-      <!-- #endregion -->
+       <!-- #fim Primeira etapa -->
+
+
+      <!-- #start Segunda etapa -->
+      <div class="wrp-slectPlan">
+        <div class="wrp-infos-slect-plan">
+          <div class="wrp-tituloInfo">
+            <h1>Selecione seu plano</h1>
+            <h3>Você tem a opção de cobrança mensal ou anual.</h3>
+          </div>
+
+          <div class="wpr-types-plan-monthly">
+            <div class="wpr-plan">
+              <div class="wpr-icon-plan"><img src="assets/images/icon-arcade.svg" alt=""></div>
+              <div class="wrp-info-plan">
+                <h3>Arcade</h3>
+                <h4>30/mo</h4>
+              </div>
+            </div>
+
+            <div class="wpr-plan">
+              <div class="wpr-icon-plan"><img src="assets/images/icon-advanced.svg" alt=""></div>
+              <div class="wrp-info-plan">
+                <h3>Advanced</h3>
+                <h4>40/mo</h4>
+              </div>
+            </div>
+
+            <div class="wpr-plan">
+              <div class="wpr-icon-plan"><img src="assets/images/icon-pro.svg" alt=""></div>
+              <div class="wrp-info-plan">
+                <h3>Pro</h3>
+                <h4>50/mo</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="wrp-types-choose-plan">
+          <p class="plan-mode-on">Monthly</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+          <p class="plan-mode-off">Yearly</p>
+          </div>
+        </div>
+
+        <div class="wpr-btns-nav">
+          <button class="btn-go-back">Go Back</button>
+          <button class="btn-next-step">Next Step</button>
+        </div>
+      </div>
+      <!-- #fim Segunda etapa -->
+
+      <!-- #start Terceira etapa -->
+      <div class="wrp-adicionais">
+        <div class="wpr-content-addons">
+          <div class="wrp-tituloInfo">
+            <h1>Adicionais</h1>
+            <h3>Complementos ajudam a aprimorar sua experiência de jogo.</h3>
+          </div>
+  
+          <div class="wrp-addons">
+            <div class="wpr-addon slected-addon">
+              <div class="wrp-info-add">
+                <label class="container-chekbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="wrp-description-addons">
+                  <h2>Serviço Online</h2>
+                  <h3>Acesso a jogos multiplayer.</h3>
+                </div>
+              </div>
+              <h3>+3$/mo</h3>
+            </div>
+    
+            <div class="wpr-addon">
+              <div class="wrp-info-add">
+                <label class="container-chekbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="wrp-description-addons">
+                  <h2>Serviço Online</h2>
+                  <h3>Acesso a jogos multiplayer.</h3>
+                </div>
+              </div>
+              <h3>+3$/mo</h3>
+            </div>
+  
+            <div class="wpr-addon">
+              <div class="wrp-info-add">
+                <label class="container-chekbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="wrp-description-addons">
+                  <h2>Serviço Online</h2>
+                  <h3>Acesso a jogos multiplayer.</h3>
+                </div>
+              </div>
+              <h3>+3$/mo</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="wpr-btns-nav">
+          <button class="btn-go-back">Go Back</button>
+          <button class="btn-next-step">Next Step</button>
+        </div>
+
+
+      </div>
+      <!-- #fim Terceira etapa -->
+
 
     </div>
   </div>
 
-  <!-- Sidebar start -->
+      <!-- #start Primeira etapa -->
 
-  <!-- Step 1
-  Your info
+      <!-- #fim Primeira etapa -->
 
-  Step 2
-  Select plan
-
-  Step 3
-  Add-ons
-
-  Step 4
-  Summary -->
-
-  <!-- Sidebar end -->
-
-  <!-- Step 1 start -->
-
-  <!-- 
-  Personal info
-  Please provide your name, email address, and phone number.
-
-  Name
-  e.g. Stephen King
-
-  Email Address
-  e.g. stephenking@lorem.com
-
-  Phone Number
-  e.g. +1 234 567 890
-
-  Next Step
- -->
-  <!-- Step 1 end -->
 
   <!-- Step 2 start -->
 <!-- 
